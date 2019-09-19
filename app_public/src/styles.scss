@@ -1,0 +1,17 @@
+/* You can add global styles to this file, and also import other style files */
+
+$white-color: #fff;
+
+$background-green-color:  #108a93;
+
+body {
+  font-family: "Cabin", Arial, sans-serif;
+  color: $white-color;
+  background-color: $background-green-color;
+}
+.banner {
+  margin-top: 4em;
+  border-bottom: 1px solid #469ea8;
+  margin-bottom: 1.5em;
+  padding-bottom: 0.5em;
+}

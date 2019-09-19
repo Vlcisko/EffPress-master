@@ -1,0 +1,30 @@
+<!--https://www.codeply.com/go/w1AMD1EY3c-->
+<div class="row" >
+    <div class="col-1" style="background-color: brown">
+      <pdfjs-thumbnails [pdfjsControl]="pdfjsControl" [pdfjsGroupControl]="pdfjsGroupControl"
+                        [quality]="1"
+                        [fitSize]="100"
+                        [previewDelay]="300"
+                        [previewHeight]="300"
+                        [allowDrop]="false"
+                        [allowRemove]="false"
+                        [dragMode]="ThumbnailDragMode.DUPLICATE"
+                        [layout]="ThumbnailLayout.VERTICAL" (render)="renderHandler($event)">
+      </pdfjs-thumbnails>
+    </div>
+    <div class="col-11" style="background-color: bisque">
+      <button [disabled]="true">
+          {{pdfjsGroupControl.getSelectedPageIndex()+" / "+pdfjsGroupControl.getPageNumber()}}
+        </button>
+
+      <pdfjs-view [control]="pdfjsGroupControl"
+                  [textLayer]="textEnable"
+                  [fit]="fit"
+                  [quality]="quality"
+                  [scale]="scale"
+                  [class.edit-mode]="editMode">
+      </pdfjs-view>
+    </div>
+
+</div>
+
