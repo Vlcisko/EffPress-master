@@ -1,26 +1,33 @@
 <div class="row">
+  <div class="col-12 col-md-6">
+    <h1>
+      Cislo strany: {{page.pagePdfPosition}}
+    </h1>
+  </div>
+</div>
+<div class="row">
     <div class="col-12 col-md-6">
       Hodnotienie:
-      <app-rating-stars [rating]="pageContent.rating"></app-rating-stars>
+      <app-rating-stars [rating]="page.rating"></app-rating-stars>
     </div>
 </div>
 <div class="row">
     <div class="col-12 col-md-6">
-      Počet hodnotení: {{pageContent.rating}}
+      Počet hodnotení: {{page.ratingN}}
     </div>
 </div>
 <div class="row">
     <div class="col-12 col-md-6">
-      Počet koémentárov: 2
+      Počet koémentárov: {{page.commentsN}}
     </div>
 </div>
 <div class="row">
     <div class="col-12 col-md-6">
-      Počet otázok: 1
+      Počet otázok: {{page.questionN}}
     </div>
 </div>
 <div class="row">
     <div class="col-12 col-md-6">
-      Počet testových otázok: 2
+      Počet testových otázok: {{page.testN}}
     </div>
 </div>

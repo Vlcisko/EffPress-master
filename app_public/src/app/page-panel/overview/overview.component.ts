@@ -1,6 +1,6 @@
+import { Page } from './../../page';
 import { Component, OnInit } from '@angular/core';
 
-import { Page } from '../../page';
 
 import { PagePanelDataService } from '../page-panel-data.service';
 
@@ -13,22 +13,11 @@ import { PagePanelDataService } from '../page-panel-data.service';
 })
 export class OverviewComponent implements OnInit {
 
-  public pageContent = {
-    rating: 0
-  };
-
-  pageTest: Page = {
-    _id: "123",
-    reviewNumber: 1,
-    comentsNumber: 2,
-    ratingNumber: 3,
-    rating: 4,
-  };
+  page: Page;
 
   constructor(private pagePanelDataService : PagePanelDataService) {
     this.pagePanelDataService.pageChanged$.subscribe(page => {
-      this.pageContent.rating = page.rating;
-      console.log("ddd");
+      this.page = page;
     });
   }
 

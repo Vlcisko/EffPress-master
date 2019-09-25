@@ -1,7 +1,9 @@
 export class Page {
     _id: string;
-    reviewNumber: number;
-    comentsNumber: number;
-    ratingNumber: number;
+    questionN: number;
+    testN: number;
+    commentsN: number;
+    ratingN: number;
     rating: number;
+    pagePdfPosition: number;
 }

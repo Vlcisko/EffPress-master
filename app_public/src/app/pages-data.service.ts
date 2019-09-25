@@ -17,7 +17,7 @@ export class PagesDataService {
   private apiBaseUrl = environment.apiBaseUrl;
 
   public getPageById(pageId: string): Promise<Page> {
-    const url: string = `${this.apiBaseUrl}/pages/${pageId}`;
+    const url: string = `${this.apiBaseUrl}/page/${pageId}`;
     return this.http
     .get(url)
     .toPromise()

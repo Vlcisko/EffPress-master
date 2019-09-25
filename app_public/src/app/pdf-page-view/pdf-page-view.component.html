@@ -7,11 +7,14 @@
 </div>
 <div class="row" >
   <div class="col-8" style="background-color:rgb(194, 192, 190)">
-    <app-pdf-viewer-hhangular></app-pdf-viewer-hhangular>
+    <app-pdf-viewer-hhangular
+      (changedPage)="onPageChange($event)">
+    </app-pdf-viewer-hhangular>
   </div>
 
   <div class="col-4" style="background-color:chocolate">
-    <app-page-panel *ngIf="page" [page]="page"></app-page-panel>
+    <app-page-panel *ngIf="page"[page]="page">
+    </app-page-panel>
   </div>
 </div>
 

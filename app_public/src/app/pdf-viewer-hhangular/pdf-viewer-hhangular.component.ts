@@ -1,10 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 import {PdfjsControl, PdfjsGroupControl,
   RenderEvent, RenderEventType,
   RenderQuality, ThumbnailDragMode,
   ThumbnailLayout, ViewFit
 } from '@hhangular/pdfjs';
+
 
 
 @Component({
@@ -28,14 +29,28 @@ export class PdfViewerHhangularComponent implements OnInit {
   quality: RenderQuality = 2;
   textEnable = false;
 
-  constructor() { }
-
   pdfjsGroupControl: PdfjsGroupControl = new PdfjsGroupControl();
   pdfjsControl: PdfjsControl = new PdfjsControl();
+
+
+  @Output() changedPage = new EventEmitter<number>();
+
+  constructor() { }
 
   ngOnInit():void {
      this.pdfjsControl.load('assets/test.pdf', true);
      this.pdfjsGroupControl.selectControl(this.pdfjsControl);
+     //this.pdfjsGroupControl.selectNext();
+      //this.pdfjsGroupControl.selectLast();
+      /*console.log(this.pdfjsGroupControl.getSelectedPageIndex());
+      console.log("selected index 2222: "+ this.pdfjsControl.selectedIndex$.getValue());*/
+      this.pdfjsControl.selectedIndex$.subscribe(number=>{
+        this.changedPage.emit(number);
+        console.log("selected page number: "+ number);
+
+      });
+     //console.log(this.pdfjsGroupControl.getPageNumber());
+
   }
 
   renderHandler($event: RenderEvent) {
@@ -50,4 +65,9 @@ export class PdfViewerHhangularComponent implements OnInit {
     }
   }
 
+
+  changePageHandler(event: Event) {
+    console.log(this.pdfjsGroupControl.selectPageIndex(parseInt((event.target as HTMLInputElement).value, 10)))
+    ;
+  }
 }
