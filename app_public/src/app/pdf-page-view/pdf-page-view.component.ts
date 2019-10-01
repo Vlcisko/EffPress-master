@@ -1,3 +1,4 @@
+import { Page } from './../page';
 import { PagesCollection } from './../iterator/pageIterator';
 import { Iteratorr } from './../iterator/Iterator';
 import { Component, OnInit } from '@angular/core';
@@ -7,7 +8,6 @@ import { switchMap, finalize } from 'rxjs/operators';
 import { PagesDataService } from '../pages-data.service';
 import { PagePanelDataService } from '../page-panel/page-panel-data.service';
 
-import { Page } from '../page';
 import { pipe, Observable } from 'rxjs';
 
 
@@ -20,7 +20,8 @@ export class PdfPageViewComponent implements OnInit {
 
   public page: Page;
   private pageIterator: Iteratorr<Page>;
-  private collection: PagesCollection;
+  public collection: PagesCollection;
+
 
   constructor(
     private route: ActivatedRoute,
@@ -39,6 +40,9 @@ export class PdfPageViewComponent implements OnInit {
   }*/
 
   ngOnInit() {
+    this.pagesDataService.createPdf(3).then((response) => {
+      console.log(response);
+    });
     this.collection = new PagesCollection();
     this.pageIterator = this.collection.getIterator();
     //inicializacia iteratora
@@ -51,25 +55,31 @@ export class PdfPageViewComponent implements OnInit {
   }
 
   async initialiseIterator(callback){
-    let a1 = await this.getPages('5d7ff1aab45e5e5ea4176aff');
-    this.collection.addItem(a1);
-    let a2 = await this.getPages('5d8a65cd56434b294cf26448');
-    this.collection.addItem(a2);
-    let a3 = await this.getPages('5d8a660656434b294cf26449');
-    this.collection.addItem(a3);
+    /*let page1 = await this.getPages('5d7ff1aab45e5e5ea4176aff');
+    this.collection.addItem(page1);
+    let page2 = await this.getPages('5d8a65cd56434b294cf26448');
+    this.collection.addItem(page2);
+    let page3 = await this.getPages('5d8a660656434b294cf26449');
+    console.log(page3);
+    this.collection.addItem(page3);*/
+    let pdf = await this.getPdf('5d8b640a58dda71924bd2f95');
+    pdf.pages.forEach((page)=>{
+      this.collection.addItem(page);
+    });
     callback();
     this.setPage(2);
   }
 
-  setPage(page: number){
-    this.page = this.pageIterator.setPage(page);
-    this.pagePanelDataService.emitPage(this.page);
-  }
 
   //event zmeny page z child componentu- pdf-viewer-hhanguler
   onPageChange(newPage: number){
     console.log("sssss");
     this.page = this.pageIterator.setPage(newPage);
+    this.pagePanelDataService.emitPage(this.page);
+  }
+
+  setPage(page: number){
+    this.page = this.pageIterator.setPage(page);
     this.pagePanelDataService.emitPage(this.page);
   }
 
@@ -100,7 +110,11 @@ export class PdfPageViewComponent implements OnInit {
   async getPages(ID: string){
     let id = ID;
     return await this.pagesDataService.getPageById(id);
+  }
 
+  async getPdf(ID: string){
+    let id = ID;
+    return await this.pagesDataService.getPdfById(id);
   }
 
 }

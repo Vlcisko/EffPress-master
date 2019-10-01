@@ -60,4 +60,4 @@ process.on('SIGTERM', () => {
 connect();
 
 //calling model
-require('./pdf');
+require('./pdfs');

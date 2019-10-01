@@ -35,6 +35,7 @@ export class PdfViewerHhangularComponent implements OnInit {
 
   @Output() changedPage = new EventEmitter<number>();
 
+
   constructor() { }
 
   ngOnInit():void {

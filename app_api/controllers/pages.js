@@ -1,8 +1,8 @@
 const mongoose = require('mongoose');
-const Page = mongoose.model('Page');
+const pdf = mongoose.model('Pdf');
 
 const pageReadOne = (req, res) => {
-    Page
+    pdf
         .findById(req.params.pageid) 
         .exec((err, page) => {
             if (!page) {
@@ -19,7 +19,7 @@ const pageReadOne = (req, res) => {
             res
                 .status(200)
                 .json(page);
-        });
+        });  
 };
 
 
