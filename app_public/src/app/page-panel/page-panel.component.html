@@ -3,7 +3,21 @@
     Page rating {{page.rating}}
   </div>
 </div>
-
+<form action="">
+  <h4>Pridaj hodnotenie</h4>
+  <div class="form-group row">
+    <label for="rating" class="col-sm-3 col-form-label">Hodnotenie</label>
+    <div class="col-sm-9 col-md-3">
+        <select id="rating" name="rating" class="form-control">
+          <option value="5">5</option>
+          <option value="4">4</option>
+          <option value="3">3</option>
+          <option value="2">2</option>
+          <option value="1">1</option>
+        </select>
+      </div>
+  </div>
+</form>
 <app-insert-panel></app-insert-panel>
 <div style="background-color:cyan; height: 76%;">
   <router-outlet></router-outlet>

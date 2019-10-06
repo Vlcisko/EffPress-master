@@ -2,6 +2,12 @@ const express = require('express');
 const router = express.Router();
 const ctrlPdfs = require('../controllers/pdfs');
 const ctrlPages = require('../controllers/pages');
+const ctrlAuth = require('../controllers/authentication');
+const jwt = require('express-jwt');
+const auth = jwt({
+    secret: process.env.JWT_SECRET,
+    userProperty: 'payload'
+});
 
 router
     .route('/pages/:pageid')
@@ -15,6 +21,9 @@ router
 router
     .route('/pdfs/:pdfid')
     .get(ctrlPdfs.pdfReadOne);
+
+router.post('/register', ctrlAuth.register);
+router.post('/login', ctrlAuth.login);
 
 
 module.exports = router;

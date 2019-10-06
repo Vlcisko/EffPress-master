@@ -6,7 +6,6 @@ import { Page } from '../page';
   selector: 'app-page-panel',
   templateUrl: './page-panel.component.html',
   styleUrls: ['./page-panel.component.scss'],
-
 })
 export class PagePanelComponent implements OnInit {
 

@@ -61,3 +61,4 @@ connect();
 
 //calling model
 require('./pdfs');
+require('./users');
