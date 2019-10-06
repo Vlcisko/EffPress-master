@@ -6,7 +6,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import {SharedModule} from './shared/shared.module';
 
-import { PanelRoutingModule } from './page-panel/panel-routing/panel-routing.module';
 import { AppRoutingModule } from './app-routing/app-routing.module';
 
 import { FrameworkComponent } from './framework/framework.component';
@@ -16,7 +15,6 @@ import { OverviewComponent } from './page-panel/overview/overview.component';
 import { CommentsComponent } from './page-panel/comments/comments.component';
 import { RatingStarsComponent } from './rating-stars/rating-stars.component';
 import { PagePanelComponent } from './page-panel/page-panel.component';
-import { InsertPanelComponent } from './page-panel/insert-panel/insert-panel.component';
 import { RegisterComponent } from './register/register.component';
 import { PdfViewerComponent } from './pdf-viewer/pdf-viewer.component';
 import { LoginComponent } from './login/login.component';
@@ -46,7 +44,6 @@ import { PdfViewerComponent } from './pdf-viewer/pdf-viewer.component';
     CommentsComponent,
     RatingStarsComponent,
     PagePanelComponent,
-    InsertPanelComponent,
     RegisterComponent,
     LoginComponent,
   ],
@@ -55,7 +52,6 @@ import { PdfViewerComponent } from './pdf-viewer/pdf-viewer.component';
     BrowserModule,
     SharedModule,
     AppRoutingModule,
-    PanelRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
     FormsModule

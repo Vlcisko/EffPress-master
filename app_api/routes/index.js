@@ -10,9 +10,9 @@ const auth = jwt({
 });
 
 router
-    .route('/pages/:pageid')
-    .get(ctrlPages.pageReadOne);
-
+    .route('/pdfs/:pdfid/pages/:pageid')
+    .get(ctrlPages.pageReadOne)
+    .post(auth, ctrlPages.ratingCreate)
 
 router
     .route('/pdfs')

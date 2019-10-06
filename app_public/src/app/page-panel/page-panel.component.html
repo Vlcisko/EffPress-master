@@ -3,22 +3,48 @@
     Page rating {{page.rating}}
   </div>
 </div>
-<form action="">
-  <h4>Pridaj hodnotenie</h4>
-  <div class="form-group row">
-    <label for="rating" class="col-sm-3 col-form-label">Hodnotenie</label>
-    <div class="col-sm-9 col-md-3">
-        <select id="rating" name="rating" class="form-control">
-          <option value="5">5</option>
-          <option value="4">4</option>
-          <option value="3">3</option>
-          <option value="2">2</option>
-          <option value="1">1</option>
-        </select>
+
+<div class="row">
+    <div class="col-12">
+        <div class="card-block" [ngSwitch]="isLoggedIn()">
+          <button (click)="formVisible=true" class="btn btn-primary
+          float-right"*ngSwitchCase="true">Vložiť</button>
+          <a routerLink="/login" class="btn btn-primary float-right"
+          *ngSwitchDefault>Prihlásiť sa pre vkladanie</a>
+          </div>
+    </div>
+</div>
+
+
+<div *ngIf="formVisible">
+  <form (ngSubmit)="onRateSubmit()">
+    <h4>Pridaj hodnotenie</h4>
+    <div class="form-group row">
+      <label for="rating" class="col-sm-3 col-form-label">Hodnotenie</label>
+      <div class="col-sm-9 col-md-3">
+          <select [(ngModel)]="newRating.rating" id="rating" name="rating" class="form-control">
+            <option [ngValue]="5">5</option>
+            <option [ngValue]="4">4</option>
+            <option [ngValue]="3">3</option>
+            <option [ngValue]="2">2</option>
+            <option [ngValue]="1">1</option>
+          </select>
+        </div>
+    </div>
+    <div class="form-group row">
+        <div class="col-12">
+          <button type="submit" class="btn btn-primary float-right"
+          style="margin-left:15px">Vložiť hodnotenie</button>
+          <button (click)="formVisible=false" type="button" class="btn btn-default float-
+          right">Zrušiť</button>
+        </div>
       </div>
-  </div>
-</form>
-<app-insert-panel></app-insert-panel>
-<div style="background-color:cyan; height: 76%;">
-  <router-outlet></router-outlet>
+  </form>
+</div>
+
+<div style="background-color:cyan; height: 40%;">
+  <app-overview></app-overview>
+</div>
+<div style="background-color:blueviolet; height: 10%;">
+  <app-comments></app-comments>
 </div>

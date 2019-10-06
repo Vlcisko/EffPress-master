@@ -1,6 +1,17 @@
 const mongoose = require('mongoose');
 
-
+const ratingSchema = new mongoose.Schema({
+    author: {
+        type: String,
+        required: true
+    },
+    rating: {
+        type: Number,
+        required: true,
+        min: 0,
+        max: 5
+    },
+});
 
 const pageSchema = new mongoose.Schema({
     questionN: {
@@ -12,9 +23,7 @@ const pageSchema = new mongoose.Schema({
     commentsN: {
         type: Number  
     },
-    ratingN: {
-        type: Number  
-    },
+    ratings:[ratingSchema],
     rating: {
         type: Number 
     },
@@ -29,5 +38,7 @@ const pdfSchema = new mongoose.Schema({
     },
     pages: [pageSchema]
 });
+
+
 
 mongoose.model('Pdf', pdfSchema, 'pdfFiles');

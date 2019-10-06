@@ -1,14 +1,13 @@
 import { AuthResponse } from './authresponse';
 import { User } from './user';
-import { Injectable } from '@angular/core';
+import { Injectable, Inject } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { BROWSER_STORAGE } from './storage'
 
 import { Page } from './page';
 
 
 import { environment } from '../environments/environment';
-import { userInfo } from 'os';
 
 
 @Injectable({
@@ -16,7 +15,9 @@ import { userInfo } from 'os';
 })
 export class PagesDataService {
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient,
+    @Inject(BROWSER_STORAGE) private storage: Storage
+    ) { }
 
   private apiBaseUrl = environment.apiBaseUrl;
 
@@ -52,6 +53,28 @@ export class PagesDataService {
     console.error('Something has gone wrong', error);
     return Promise.reject(error.message || error);
   }
+
+
+  public addRatingByPdfPageId(pdfId: string, pageId: string, formData: any): Promise<any> {
+    const url: string = `${this.apiBaseUrl}/pdfs/${pdfId}/pages/${pageId}`;
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Authorization': `Bearer ${this.storage.getItem('effpress-token')}`
+      })
+    };
+    return this.http
+      .post(url, formData, httpOptions)
+      .toPromise()
+      .then(response => response as any)
+      .catch(this.handleError);
+  }
+
+
+
+
+
+
+
 
   public login(user: User): Promise<AuthResponse> {
     return this.makeAuthApiCall('login', user);

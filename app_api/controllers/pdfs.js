@@ -25,7 +25,7 @@ const pdfReadOne = (req, res) => {
 
 const pdfCreate = (req, res) => {
     const { numPages } = req.body
-    console.log("createeeeeeeeeeeeeeeeee-************** "+ numPages);
+    console.log("***Pri nacitani pdf, treba vytvorit pdf strukturu pre pdf a pre pocet stran: "+ numPages);
     res
         .status(201)
         .json(req.body);

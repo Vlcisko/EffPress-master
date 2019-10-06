@@ -65,6 +65,7 @@ export class PdfPageViewComponent implements OnInit {
     let pdf = await this.getPdf('5d8b640a58dda71924bd2f95');
     pdf.pages.forEach((page)=>{
       this.collection.addItem(page);
+      console.log(page);
     });
     callback();
     this.setPage(2);
@@ -73,7 +74,7 @@ export class PdfPageViewComponent implements OnInit {
 
   //event zmeny page z child componentu- pdf-viewer-hhanguler
   onPageChange(newPage: number){
-    console.log("sssss");
+    console.log("page changed");
     this.page = this.pageIterator.setPage(newPage);
     this.pagePanelDataService.emitPage(this.page);
   }
