@@ -2,16 +2,15 @@
 
 $white-color: #fff;
 
-$background-green-color:  #108a93;
+$background-green-color:  #2b4899;
 
 body {
   font-family: "Cabin", Arial, sans-serif;
   color: $white-color;
   background-color: $background-green-color;
 }
-.banner {
-  margin-top: 4em;
-  border-bottom: 1px solid #469ea8;
-  margin-bottom: 1.5em;
-  padding-bottom: 0.5em;
+
+.framework-content {
+  margin-top: 5vh;
 }
+

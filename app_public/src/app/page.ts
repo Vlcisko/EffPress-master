@@ -5,6 +5,8 @@ export class Page {
     commentsN: number;
     ratingN: number;
     rating: number;
+    ratingQ: number;
+    ratingL: number;
     ratings: any;
     pagePdfPosition: number;
 }

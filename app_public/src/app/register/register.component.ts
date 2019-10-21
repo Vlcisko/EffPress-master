@@ -15,7 +15,9 @@ export class RegisterComponent implements OnInit {
   public credentials = {
     name: '',
     email: '',
-    password: ''
+    password: '',
+    details: '',
+    imagePath: ''
   }
 
   constructor(

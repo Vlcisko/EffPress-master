@@ -18,6 +18,8 @@ import { PagePanelComponent } from './page-panel/page-panel.component';
 import { RegisterComponent } from './register/register.component';
 import { PdfViewerComponent } from './pdf-viewer/pdf-viewer.component';
 import { LoginComponent } from './login/login.component';
+import { RatingLikesComponent } from './rating-likes/rating-likes.component';
+import { CommentComponent } from './page-panel/comment/comment.component';
 
 /* pouzitie mozilla pdf.js- s komponentom pdf-viewer
 import { PdfViewerComponent } from './pdf-viewer/pdf-viewer.component';
@@ -46,6 +48,8 @@ import { PdfViewerComponent } from './pdf-viewer/pdf-viewer.component';
     PagePanelComponent,
     RegisterComponent,
     LoginComponent,
+    RatingLikesComponent,
+    CommentComponent,
   ],
   imports: [
     BrowserAnimationsModule,

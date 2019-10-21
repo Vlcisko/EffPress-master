@@ -1,0 +1,10 @@
+.overflow-auto {
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.customList {
+  height: calc(100% - 50px);
+}
+

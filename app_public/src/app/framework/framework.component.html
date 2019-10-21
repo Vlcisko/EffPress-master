@@ -1,5 +1,5 @@
 <nav class="navbar fixed-top navbar-expand-md navbar-light">
-  <div class="container">
+  <div class="container-fluid">
     <a routerLink="" class="navbar-brand">EffPress</a>
     <button type="button" data-toggle="collapse" data-target="#navbarMain" class="navbar-toggler">
       <span class="navbar-toggler-icon"></span>
@@ -7,28 +7,24 @@
 
     <div id="navbarMain" class="navbar-collapse collapse">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a routerLink="" class="nav-link">EffPress</a>
-        </li>
         <li class="nav-item">
-          <a routerLink="about"  class="nav-link">About</a>
+          <a routerLink="about"  class="nav-link">Info</a>
         </li>
         <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Dropdown
+              Viac
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#">Akcia 1</a>
+              <a class="dropdown-item" href="#">Akcia 2</a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Something else here</a>
+              <a class="dropdown-item" href="#">Ďalšia akcia</a>
             </div>
           </li>
       </ul>
       <ul class="navbar-nav justify-content-end">
           <li class="nav-item" routerLinkActive="active">
-            <a routerLink="login" class="nav-link" *ngIf="!isLoggedIn()">
-            Sign in</a>
+            <a routerLink="login" class="nav-link" *ngIf="!isLoggedIn()">Prihláste sa</a>
           </li>
           <li class="nav-item dropdown" routerLinkActive="active"
           *ngIf="isLoggedIn()">

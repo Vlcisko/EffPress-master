@@ -23,8 +23,10 @@ export class PdfViewerHhangularComponent implements OnInit {
   fit = ViewFit.HORIZONTAL;
   progress = 0;
   timeStart = 0;
-  scale = 0.7;
+  scale = 0.8;
   editMode = false;
+
+  scalePercentage = 100;
 
   quality: RenderQuality = 2;
   textEnable = false;
@@ -39,7 +41,8 @@ export class PdfViewerHhangularComponent implements OnInit {
   constructor() { }
 
   ngOnInit():void {
-     this.pdfjsControl.load('assets/test.pdf', true);
+     this.pdfjsControl.load('assets/psi_03_manazment-poziadaviek.pdf', true);
+     //this.pdfjsControl.load('assets/test.pdf', true);
      this.pdfjsGroupControl.selectControl(this.pdfjsControl);
      //this.pdfjsGroupControl.selectNext();
       //this.pdfjsGroupControl.selectLast();
@@ -52,6 +55,16 @@ export class PdfViewerHhangularComponent implements OnInit {
       });
      //console.log(this.pdfjsGroupControl.getPageNumber());
 
+  }
+
+  scalePlus(){
+    this.scalePercentage += 10;
+    this.scale += 0.1;
+  }
+
+  scaleMinus(){
+    this.scalePercentage -= 10;
+    this.scale -= 0.1;
   }
 
   renderHandler($event: RenderEvent) {

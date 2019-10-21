@@ -24,7 +24,15 @@ const pageSchema = new mongoose.Schema({
         type: Number  
     },
     ratings:[ratingSchema],
+    ratingsQ:[ratingSchema],
+    ratingsL:[ratingSchema],
     rating: {
+        type: Number 
+    },
+    ratingQ: {
+        type: Number 
+    },
+    ratingL: {
         type: Number 
     },
     pagePdfPosition: {

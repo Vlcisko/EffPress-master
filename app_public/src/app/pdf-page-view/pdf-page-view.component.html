@@ -1,20 +1,18 @@
-<div class="row banner">
+<!--<div class="row banner">
     <div class="col-12">
     <h1>EffPress
     <small>PDF sentiment</small>
     </h1>
     </div>
-</div>
-<div class="row" >
-  <div class="col-8" style="background-color:rgb(194, 192, 190)">
+</div>-->
+<div class="row framework-content" style="height: 95vh;">
+  <div class="col-9" style="background-color:rgb(194, 192, 190);border-right: 2px solid rgb(168, 166, 163)">
     <app-pdf-viewer-hhangular
-      (changedPage)="onPageChange($event)">
-    </app-pdf-viewer-hhangular>
+      (changedPage)="onPageChange($event)"></app-pdf-viewer-hhangular>
   </div>
 
-  <div class="col-4" style="background-color:chocolate">
-    <app-page-panel *ngIf="page" [page]="page">
-    </app-page-panel>
+  <div class="col-3" style="background-color:rgb(184, 182, 179)">
+    <app-page-panel *ngIf="page" [page]="page"></app-page-panel>
   </div>
 </div>
 

@@ -1,33 +1,37 @@
 <div class="row">
-  <div class="col-12 col-md-6">
-    <h1>
-      Cislo strany: {{page.pagePdfPosition}}
-    </h1>
+  <div class="col-10">
+    <h4>
+      Slajd: {{page.pagePdfPosition}}
+    </h4>
+  </div>
+  <div class="ml-auto">
+      <button class="btn" style="color: white;">
+        <i class="fa fa-arrow-circle-right fa-lg"></i></button>
   </div>
 </div>
+    
 <div class="row">
-    <div class="col-12 col-md-6">
-      Hodnotienie:
-      <app-rating-stars [rating]="page.rating"></app-rating-stars>
-    </div>
+  <div class="col-3"></div> 
+  <div class="col-8">    
+    <app-rating-likes [description]="'Náročnosť slajdu'" [likes]="4" [dislikes]="1" [size]="'lg'"></app-rating-likes>
+  </div>
+  <div class="col-1"></div> 
 </div>
+
 <div class="row">
-    <div class="col-12 col-md-6">
-      Počet hodnotení: {{page.ratingN}}
-    </div>
+  <div class="col-3"></div> 
+  <div class="col-8">    
+      <app-rating-likes [description]="'Kvalita slajdu'" [likes]="5" [dislikes]="1" [size]="'lg'"></app-rating-likes>
+  </div>
+  <div class="col-1"></div> 
 </div>
+
 <div class="row">
-    <div class="col-12 col-md-6">
-      Počet koémentárov: {{page.commentsN}}
-    </div>
+  <div class="col-3"></div> 
+  <div class="col-8">    
+      <app-rating-likes [description]="'Prehľadnosť slajdu'" [likes]="6" [dislikes]="2" [size]="'lg'"></app-rating-likes>
+  </div>
+  <div class="col-1"></div> 
 </div>
-<div class="row">
-    <div class="col-12 col-md-6">
-      Počet otázok: {{page.questionN}}
-    </div>
-</div>
-<div class="row">
-    <div class="col-12 col-md-6">
-      Počet testových otázok: {{page.testN}}
-    </div>
-</div>
+
+

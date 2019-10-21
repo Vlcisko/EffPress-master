@@ -27,17 +27,7 @@ export class PdfPageViewComponent implements OnInit {
     private route: ActivatedRoute,
     private pagesDataService: PagesDataService,
     private pagePanelDataService: PagePanelDataService
-  ) {
-
-  }
-  /*testPage: Page = {
-    _id: 'sss',
-    questionN: 3,
-    commentsN: 4,
-    ratingN: 1,
-    rating: 5,
-    testN: 4,
-  }*/
+  ) {}
 
   ngOnInit() {
     this.pagesDataService.createPdf(3).then((response) => {

@@ -1,1 +1,54 @@
-<p>comments works!</p>
+<!--<div class="form-group shadow-textarea row" style="text-align:center">
+  <div class="col-lg-1"></div>
+  <div class="col-lg-10">
+    <label for="exampleFormControlTextarea6">Napíšte komentár</label>
+    <textarea class="form-control z-depth-1"
+        id="exampleFormControlTextarea6"
+        rows="2"
+        placeholder="Text komentára..."></textarea>
+    <button type="button" class="btn btn-primary">Vložiť komentár</button>
+  </div>
+  <div class="col-lg-1"></div>
+</div>
+
+<div class="row" style="text-align:center">
+  <div class="col-lg-1"></div>
+  <div class="col-lg-10" style="background-color: chartreuse;">
+    <label for="exampleFormControlTextarea6">Mohol by niekto napísať čo sa nachádza v server.xml</label>
+  </div>
+  <div class="col-lg-1"></div>
+</div>
+<div class="row" style="text-align:center">
+  <div class="col-lg-2"></div>
+  <div class="col-lg-9" style="background-color: chartreuse;">
+    <label for="exampleFormControlTextarea6">V súbure je len konfigurácia servera</label>
+  </div>
+  <div class="col-lg-1"></div>
+</div>-->
+
+<div class="container-fluid">
+  <div class="row">
+      <div class="col">
+
+          <div class="form-group shadow-textarea row" style="text-align:center;border-top: 2px solid rgb(168, 166, 163)">
+              <div class="col-lg-1"></div>
+              <div class="col-lg-10">
+                <label style="margin-top:5px; color:black ;">Komentáre:</label>
+                <textarea class="form-control z-depth-1"
+                    id="exampleFormControlTextarea6"
+                    rows="2"
+                    placeholder="Text komentára..."></textarea>
+                <button type="button" class="btn" style="margin-top:5px; color:white ;background-color: rgb(83, 83, 87);">Vložiť komentár</button>
+              </div>
+              <div class="col-lg-1"></div>
+            </div>
+
+          <div class="customList">
+              <ul class="overflow-auto" id="contact-list">
+                  <app-comment *ngFor="let el of elList" [element]="el">
+                  </app-comment>
+              </ul>
+          </div>
+      </div>
+  </div>
+</div>

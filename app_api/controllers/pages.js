@@ -118,24 +118,39 @@ const doAddRating = (req, res, pdf, page, author) => {
           .status(404)
           .json({ "message": "Page not found" });
   } else {
-      const { rating } = req.body;
+      let { rating, ratingQ, ratingL } = req.body;
+      console.log(rating+" Q: "+ratingQ+" L: "+ratingL);
+
       page.ratings.push({
           author,
           rating
       });
+      rating = ratingQ;
+      page.ratingsQ.push({
+        author,
+        rating
+      });
+      rating = ratingL;
+      page.ratingsL.push({
+        author,
+        rating
+      });
+      console.log(page);
       pdf.save((err, pdfs) => {
           if (err) {
                 res
                   .status(400)
                   .json(err);
           } else {
-              updateAverageRating(page._id, pdfs._id);
-              /*console.log(pdfs.pages.slice(-1).pop());
-              console.log(pdfs.pages.slice(0).pop());
-              const thisRating = pdfs.pages.slice(-1).pop();*/
-              res
-                  .status(201)
-                  .json(page);
+            updateAverageRating(page._id, pdfs._id);
+            /*console.log(pdfs.pages.slice(-1).pop());
+            console.log(pdfs.pages.slice(0).pop());
+            const thisRating = pdfs.pages.slice(-1).pop();*/
+            /*console.log(pdfs);
+            const pageN = pdfs.pages.id(page.s_id);*/
+            res
+                .status(201)
+                .json(page);
           }
       });
   }
@@ -148,17 +163,41 @@ const doSetAverageRating = (page, pdf) => {
           return acc + rating;
       }, 0);
       page.rating = parseInt(total / count, 10);
-      pdf.save(err => {
-          if (err) {
-              console.log(err);
-          } else {
-              console.log(`Average rating updated to ${page.rating}`);
-          }
-      });
+      /*pdf.save(err => {
+        if (err) {
+            console.log(err);
+        } else {
+            console.log(`Average rating updated to ${page.rating}`);
+        }
+    });*/
   }
+  if (page.ratingsQ && page.ratingsQ.length > 0) {
+    const count = page.ratingsQ.length;
+    const total = page.ratingsQ.reduce((acc, { rating }) => {
+        return acc + rating;
+    }, 0);
+    page.ratingQ = parseInt(total / count, 10);
+  }
+  if (page.ratingsL && page.ratingsL.length > 0) {
+      const count = page.ratingsL.length;
+      const total = page.ratingsL.reduce((acc, { rating }) => {
+          return acc + rating;
+      }, 0);
+      page.ratingL = parseInt(total / count, 10);
+
+  }
+  pdf.save(err => {
+    if (err) {
+        console.log(err);
+    } else {
+        console.log(`Average rating updated to ${page.rating}`);
+        console.log(`Average ratingQ updated to ${page.ratingQ}`);
+        console.log(`Average ratingL updated to ${page.ratingL}`);
+    }
+});
 };
 
-const updateAverageRating = (pageId, pdfId) => { 
+const updateAverageRating =  (pageId, pdfId) => { 
   pdf
     .findById(pdfId) 
     .select('pages')

@@ -1,22 +1,55 @@
 <!--https://www.codeply.com/go/w1AMD1EY3c-->
-<div class="row" >
-    <div class="col-1" style="background-color: brown">
-      <pdfjs-thumbnails [pdfjsControl]="pdfjsControl" [pdfjsGroupControl]="pdfjsGroupControl"
+<div class="row" style="height: 95vh">
+    <div class="col-2 customList overflow-auto" style="background-color:  #5f6266">
+      <div class="row">
+        <div class="ml-auto">
+          <button class="btn" style="color: white;">
+            <i class="fa fa-arrow-circle-left fa-lg"></i></button>
+        </div>
+      </div>
+      <pdfjs-thumbnails
+                        [pdfjsControl]="pdfjsControl" [pdfjsGroupControl]="pdfjsGroupControl"
                         [quality]="1"
-                        [fitSize]="100"
+                        [fitSize]="150"
                         [previewDelay]="300"
                         [previewHeight]="300"
                         [allowDrop]="false"
                         [allowRemove]="false"
-                        [dragMode]="ThumbnailDragMode.DUPLICATE"
+                        [dragMode]="ThumbnailDragMode.NONE"
                         [layout]="ThumbnailLayout.VERTICAL" (render)="renderHandler($event)">
       </pdfjs-thumbnails>
     </div>
-    <div class="col-11" style="background-color: bisque">
-      <button [disabled]="true">
-          {{pdfjsGroupControl.getSelectedPageIndex()+" / "+pdfjsGroupControl.getPageNumber()}}
-        </button>
-
+    <div class="col-10 customList overflow-auto" style="background-color:   #bdc6d1">
+      <div class="row" style="margin-bottom: 20px;">
+        <div class="col-5">
+            <button [disabled]="!pdfjsGroupControl.previousIsSelectable()"
+              (click)="pdfjsGroupControl.selectPrevious()" class="btn">
+              <i class="fa fa-arrow-left fa-2x"></i></button>
+        </div>
+        <div class="col-4">
+          <input class="btn" style = "width:55px; margin-right:-6px; border-bottom: 2px solid black;"
+                [disabled]="isNaN(pdfjsGroupControl.getSelectedPageIndex())" type="number" min="1"
+                [max]="pdfjsGroupControl.getPageNumber()"
+                [value]="pdfjsGroupControl.getSelectedPageIndex()"
+                (change)="changePageHandler($event)"/>
+          <button style = "margin-left:-10px;margin-top:8px;" class="btn" [disabled]="true">
+              <h6>/{{pdfjsGroupControl.getPageNumber()}}</h6></button>
+          <button [disabled]="pdfjsGroupControl.disabled"
+                  (click)="scalePlus()" class="btn">
+                  <i class="fa fa-plus"></i></button>
+          <i style="color: black">{{scalePercentage}}%</i>
+          <button [disabled]="pdfjsGroupControl.disabled"
+                  (click)="scaleMinus()" class="btn">
+                  <i class="fa fa-minus"></i></button>
+        </div>
+        <div class="col-2"></div>
+        <div class="ml-auto">
+          <button [disabled]="!pdfjsGroupControl.nextIsSelectable()"
+                  (click)="pdfjsGroupControl.selectNext()" class="btn">
+                  <i class="fa fa-arrow-right fa-2x"></i>
+          </button>
+        </div>
+      </div>
       <pdfjs-view [control]="pdfjsGroupControl"
                   [textLayer]="textEnable"
                   [fit]="fit"
@@ -24,6 +57,19 @@
                   [scale]="scale"
                   [class.edit-mode]="editMode">
       </pdfjs-view>
+      <div class="ml-auto" style="background-color: rgb(184, 182, 179);
+              padding: 0;
+              position: fixed;
+              z-index: 100;
+              bottom: 0;
+              right: 52vh;
+              margin: 0;
+              border: 2px solid rgb(168, 166, 163);
+              border-top-right-radius: 25px;
+              border-top-left-radius: 25px;
+            ">
+         <app-rating-likes [description]="'Prehľadnosť slajdu'"  [likes]="6" [dislikes]="2" [size]="'2x'"></app-rating-likes>
+      </div>
     </div>
 
 </div>

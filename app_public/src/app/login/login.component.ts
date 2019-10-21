@@ -15,7 +15,9 @@ export class LoginComponent implements OnInit {
   public credentials = {
     name: '',
     email: '',
-    password: ''
+    password: '',
+    details: '',
+    imagePath: ''
   }
 
   constructor(

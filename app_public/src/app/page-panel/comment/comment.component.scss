@@ -1,0 +1,21 @@
+img {
+  width: 35px;
+  height: 35px;
+  border-radius: 40px;
+  padding: 3px;
+  float: left;
+  cursor: pointer;
+}
+
+.bg-custom {
+  background: #a5b3c0;
+  border-bottom: 1px solid #7a8692;
+  margin-bottom: 8px;
+  border-radius: 10px;
+  margin-left: -20px;
+}
+
+
+.item:hover {
+  border-bottom: 5px solid #32465a;
+}

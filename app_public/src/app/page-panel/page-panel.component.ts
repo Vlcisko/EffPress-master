@@ -17,6 +17,8 @@ export class PagePanelComponent implements OnInit {
 
   public newRating = {
     rating:5,
+    ratingQ:5,
+    ratingL:5,
     author: ''
   }
 
@@ -42,12 +44,15 @@ export class PagePanelComponent implements OnInit {
     this.formVisible = false;
     this.newRating.author = '';
     this.newRating.rating = 5;
+    this.newRating.ratingQ = 5;
+    this.newRating.ratingL = 5;
   }
 
   public onRateSubmit(): void {
     this.formError = '';
     this.newRating.author = this.getUsername();
     if (this.formIsValid()) {
+      console.log(this.newRating);
       this.pagesDataService.addRatingByPdfPageId('5d8b640a58dda71924bd2f95', this.page._id, this.newRating)
         .then((page: Page) => {
           console.log('Rating saved', page);
