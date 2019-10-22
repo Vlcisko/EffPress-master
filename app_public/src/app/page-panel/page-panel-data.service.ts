@@ -20,9 +20,10 @@ export class PagePanelDataService {
   }
 
   // Service message commands
-  emitPage(change: Page): void {
-    if(change) {
-      this.pageSource.next(change);
+  emitPage(changePage: Page): void {
+    if (changePage) {
+      window.turingSlideId = changePage._id;
+      this.pageSource.next(changePage);
     }
   }
 

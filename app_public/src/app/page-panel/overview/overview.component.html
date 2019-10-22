@@ -1,19 +1,20 @@
+<div>
 <div class="row">
   <div class="col-10">
     <h4>
       Slajd: {{page.pagePdfPosition}}
     </h4>
   </div>
-  <div class="ml-auto">
+  <!--<div class="ml-auto">
       <button class="btn" style="color: white;">
         <i class="fa fa-arrow-circle-right fa-lg"></i></button>
-  </div>
+  </div>-->
 </div>
 
 <div class="row">
   <div class="col-3"></div>
   <div class="col-8">
-    <app-rating-likes [description]="'Náročnosť slajdu'" [likes]="page.ratingDifficulty.numLikes" [dislikes]="page.ratingDifficulty.numDislikes" [size]="'lg'"></app-rating-likes>
+    <app-rating-likes [description]="'Náročnosť slajdu'" [ratingType]="page.ratingDifficulty" [size]="'lg'"></app-rating-likes>
   </div>
   <div class="col-1"></div>
 </div>
@@ -21,7 +22,7 @@
 <div class="row">
   <div class="col-3"></div>
   <div class="col-8">
-      <app-rating-likes [description]="'Kvalita slajdu'" [likes]="page.ratingQualtiy.numLikes" [dislikes]="page.ratingQualtiy.numDislikes" [size]="'lg'"></app-rating-likes>
+      <app-rating-likes [description]="'Kvalita slajdu'" [ratingType]="page.ratingQualtiy" [size]="'lg'"></app-rating-likes>
   </div>
   <div class="col-1"></div>
 </div>
@@ -29,9 +30,9 @@
 <div class="row">
   <div class="col-3"></div>
   <div class="col-8">
-      <app-rating-likes [description]="'Prehľadnosť slajdu'" [likes]="page.ratingLook.numLikes" [dislikes]="page.ratingLook.numDislikes" [size]="'lg'"></app-rating-likes>
+      <app-rating-likes [description]="'Prehľadnosť slajdu' " [ratingType]="page.ratingLook" [size]="'lg'"></app-rating-likes>
   </div>
   <div class="col-1"></div>
 </div>
-
+</div>
 

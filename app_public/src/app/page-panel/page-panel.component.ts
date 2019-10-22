@@ -48,21 +48,15 @@ export class PagePanelComponent implements OnInit {
     this.newRating.ratingL = 5;
   }
 
-  public onRateSubmit(): void {
-    this.formError = '';
-    this.newRating.author = this.getUsername();
-    if (this.formIsValid()) {
-      console.log(this.newRating);
-      // this.pagesDataService.addRatingByPdfPageId('5d8b640a58dda71924bd2f95', this.page._id, this.newRating)
-      //   .then((page: Page) => {
-      //     console.log('Rating saved', page);
-      //     this.page = page;
-      //     this.resetAndHideRatingForm();
-      //   });
-    } else {
-      this.formError = 'Pre vloženie je potrebné vyplniť všetky polia';
-    }
-  }
+  // public onRateSubmit(): void {
+  //   this.formError = '';
+  //   this.newRating.author = this.getUsername();
+  //   if (this.formIsValid()) {
+  //     console.log(this.newRating);
+  //   } else {
+  //     this.formError = 'Pre vloženie je potrebné vyplniť všetky polia';
+  //   }
+  // }
 
   public isLoggedIn(): boolean {
     return !!window.turingUserId;

@@ -1,16 +1,17 @@
-import { Page, Rating } from './../page';
+import { element } from 'protractor';
+import { Pdf } from './../pdf';
+import { Page, Rating, Comment } from './../page';
 import { PagesCollection } from './../iterator/pageIterator';
 import { Iteratorr } from './../iterator/Iterator';
 import { Component, OnInit } from '@angular/core';
 
 import { ActivatedRoute, ParamMap} from '@angular/router';
-import { switchMap, finalize } from 'rxjs/operators';
 //import { PagesDataService } from '../pages-data.service';
 import { PagePanelDataService } from '../page-panel/page-panel-data.service';
 
-import { pipe, Observable } from 'rxjs';
-
 import {PdfjsControl, PdfjsGroupControl } from '@hhangular/pdfjs';
+
+import samplePdfJson from 'pdf.json';
 
 @Component({
   selector: 'app-pdf-page-view',
@@ -34,7 +35,10 @@ export class PdfPageViewComponent implements OnInit {
     pdfjsControl: this.pdfjsControl
   };
 
-  loaded : Boolean = false;
+  pdf: Pdf;
+
+  pdfFromJson: Pdf = new Pdf();
+
   constructor(
     private route: ActivatedRoute,
     //private pagesDataService: PagesDataService,
@@ -43,28 +47,88 @@ export class PdfPageViewComponent implements OnInit {
   }
 
 
-
   ngOnInit() {
     window.turingUserId = "Tomas";
+    let pdfs = JSON.stringify(samplePdfJson);
+    let pdfsjson = JSON.parse(pdfs);
+
+    //citanie pdf z json suboru
+    pdfsjson.pdfs.forEach(pdf => {
+      if (pdf._id === 'pdf.pdf') {
+        this.pdfFromJson._id = pdf._id;
+        pdf.pages.forEach((page, index) => {
+          let tmpPage: Page = new Page(index);
+          tmpPage.pdfId = page.pdfId;
+
+          let tmpRating: Rating = new Rating();
+          tmpRating.numLikes = page.ratingDifficulty.numLikes;
+          tmpRating.numDislikes = page.ratingDifficulty.numDislikes;
+          let tmpUsersRatedList: { userID: string, ratedAs: string }[] = [];
+          tmpPage.ratingDifficulty.usersRatedList.forEach((rating, index) => {
+            tmpUsersRatedList.push({userID: rating.userID, ratedAs: rating.ratedAs});
+          });
+          tmpRating.usersRatedList = tmpUsersRatedList;
+          tmpPage.ratingDifficulty = tmpRating;
+
+          tmpRating.numLikes = page.ratingQualtiy.numLikes;
+          tmpRating.numDislikes = page.ratingQualtiy.numDislikes;
+          tmpPage.ratingQualtiy.usersRatedList.forEach((rating, index) => {
+            tmpUsersRatedList.push({userID: rating.userID, ratedAs: rating.ratedAs});
+          });
+          tmpRating.usersRatedList = tmpUsersRatedList;
+          tmpPage.ratingQualtiy = tmpRating;
 
 
-    // this.pagesDataService.createPdf(3).then((response) => {
-    //   console.log(response);
-    // });
+          tmpRating.numLikes = page.ratingLook.numLikes;
+          tmpRating.numDislikes = page.ratingLook.numDislikes;
+          tmpPage.ratingLook.usersRatedList.forEach((rating, index) => {
+            tmpUsersRatedList.push({userID: rating.userID, ratedAs: rating.ratedAs});
+          });
+          tmpRating.usersRatedList = tmpUsersRatedList;
+          tmpPage.ratingLook = tmpRating;
+          console.log(tmpPage.comments);
+          tmpPage.comments.forEach((comment, index) => {
+            console.log(tmpPage.comments);
+            let tmpComment: Comment = new Comment(comment.userID, comment.commentText);
+            tmpPage.addComment(tmpComment);
+          });
+          this.pdfFromJson.addPage(tmpPage);
+        });
+      }
+    });
+
     this.collection = new PagesCollection();
     this.pageIterator = this.collection.getIterator();
 
-    console.log(window.turingUserId);
+    this.pdfjsControl.load('assets/lectures/psi_03_manazment-poziadaviek.pdf', true).then((numPages) => {
+      this.pdf = this.pdfFromJson;
+      console.log(this.pdf);
+      window.turingLectureId = this.pdf.getPdfId();
 
-    this.pdfjsControl.load('assets/psi_03_manazment-poziadaviek.pdf', true).then((numPages) => {
+      for (let i = 0; i <= this.pdf.pages.length; i++) {
+        let page: Page = this.pdf.pages[i];
+        if (page) {
+          this.collection.addItem(page);
+        }
+      }
+      this.page = this.pageIterator.current();
+      window.turingSlideId = this.page._id;
+      this.pagePanelDataService.setSubject(this.page);
+    });
+
+    /*this.pdfjsControl.load('assets/lectures/psi_03_manazment-poziadaviek.pdf', true).then((numPages) => {
+      this.pdf = new Pdf();
+      this.pdf.setPdfId("psi_03_manazment-poziadaviek.pdf");
+      window.turingLectureId = this.pdf.getPdfId();
+
       // //inicializacia iteratora
-      this.initialiseIterator(numPages, ()=>{
+      this.initialiseIterator(numPages, this.pdf, () => {
         this.page = this.pageIterator.current();
+        window.turingSlideId = this.page._id;
         this.pagePanelDataService.setSubject(this.page);
-        this.loaded = true;
         //console.table(this.page);
       });
-    });
+    });*/
 
     this.pdfjsGroupControl.selectControl(this.pdfjsControl);
 
@@ -72,34 +136,30 @@ export class PdfPageViewComponent implements OnInit {
     this.pdfControls.pageIterator = this.pageIterator;
   }
 
-  async initialiseIterator(numPages, callback){
-    /*let page1 = await this.getPages('5d7ff1aab45e5e5ea4176aff');
-    this.collection.addItem(page1);
-    let page2 = await this.getPages('5d8a65cd56434b294cf26448');
-    this.collection.addItem(page2);
-    let page3 = await this.getPages('5d8a660656434b294cf26449');
-    console.log(page3);
-    this.collection.addItem(page3);*/
-    // let pdf = await this.getPdf('5d8b640a58dda71924bd2f95');
-    // pdf.pages.forEach((page)=>{
-    //   this.collection.addItem(page);
-    //   console.log(page);
-    // });
-
-    console.log("numPages: " + numPages);
+  async initialiseIterator(numPages: number, pdf: Pdf, callback) {
     for (let i = 0; i <= numPages; i++) {
-        let rating = {
-          numLikes: i,
-          numDislikes: i,
-        }
-        let page =  {
-          _id: 'page' + i,
-          ratingDifficulty: rating,
-          ratingQualtiy: rating,
-          ratingLook: rating,
-          pagePdfPosition: i,
-      };
-      this.collection.addItem(page);
+      const page: Page = new Page(i);
+      /*let rating = {
+        numLikes: i,
+        numDislikes: i,
+      }
+      let comment = {
+        userID: window.turingUserId,
+        commentText: "comment "+i
+      }
+      let page =  {
+        _id: 'page' + i,
+        pdfId: pdf.getPdfId(),
+        ratingDifficulty: rating,
+        ratingQualtiy: rating,
+        ratingLook: rating,
+        pagePdfPosition: i,
+        comments: [comment]
+      };*/
+      if (page) {
+        this.collection.addItem(page);
+        pdf.addPage(page);
+      }
     }
     callback();
   }
@@ -107,47 +167,14 @@ export class PdfPageViewComponent implements OnInit {
 
   //event zmeny page z child componentu- pdf-viewer-hhanguler
   onPageChange(newPage: number){
-    this.page = this.pageIterator.setPage(newPage);
-    this.pagePanelDataService.emitPage(this.page);
+    if (newPage){
+      this.page = this.pageIterator.setPage(newPage);
+      this.pagePanelDataService.emitPage(this.page);
+    }
   }
 
   setPage(pageIndex: number){
     this.page = this.pageIterator.setPage(pageIndex);
     this.pagePanelDataService.emitPage(this.page);
   }
-
-  //docasne nacitava fixne ID, bude nahradene za nacitanie vsetkych pages z daneho pdf
-  //---nacitanie ID z URL
-  /*
-  getPages(ID: string){
-    this.route.paramMap
-    .pipe(
-      switchMap((params: ParamMap) => {
-        //let id = params.get('pageId');
-        let id = ID;
-        return this.pagesDataService.getPageById(id);
-      })
-    )
-    .subscribe((page: Page) => {
-      //this.pagePanelDataService.emitPage(this.page);
-
-      this.collection.addItem(page);
-      console.log(page);
-      //console.table(this.pageIterator.current());
-      //this.pageIterator.next();
-      //console.table(this.pageIterator.current());
-    }, err => {
-      console.log(err);
-    });
-  }*/
-  // async getPages(ID: string){
-  //   let id = ID;
-  //   return await this.pagesDataService.getPageById(id);
-  // }
-
-  // async getPdf(ID: string){
-  //   let id = ID;
-  //   return await this.pagesDataService.getPdfById(id);
-  // }
-
 }

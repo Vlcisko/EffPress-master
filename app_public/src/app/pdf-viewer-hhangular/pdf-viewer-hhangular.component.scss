@@ -1,13 +1,12 @@
 .overflow-auto {
   height: 95%;
-  overflow-y: hidden;
-  overflow-x: auto;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
+
 .customList {
   height: 100%;
 }
-
-
 
 :host ::ng-deep pdfjs-thumbnail{
   background-color: white;

@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Rating, Page } from './../page';
 
 @Component({
   selector: 'app-rating-likes',
@@ -7,21 +8,50 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class RatingLikesComponent implements OnInit {
 
-  @Input() likes: number;
-  @Input() dislikes: number;
+  @Input() ratingType: Rating;
   @Input() description: string;
   @Input() size: string;
+
+  userId: string = window.turingUserId;
+  actionLike: string = "+";
+  actionDislike: string = "+";
 
   constructor() { }
 
   ngOnInit() {
+    if (!this.ratingType.canLike(window.turingUserId)) {
+      this.actionDislike = "";
+      this.actionLike = "-";
+    }
+    if (!this.ratingType.canDislike(window.turingUserId)) {
+      this.actionDislike = "-";
+      this.actionLike = "";
+    }
   }
 
   likeClicked(): void {
-    console.log("user: "+ window.turingUserId + " clicked Like");
+    if(this.ratingType.addLike(this.userId)){
+      this.actionLike = "-";
+      this.actionDislike = "";
+      console.log("pdf:"+ window.turingLectureId + ", page: "+ window.turingSlideId + ", user: "+ this.userId + ", clicked Like, "+ this.description);
+    }else{
+      this.actionLike = "+";
+      this.actionDislike = "+";
+      console.log("pdf:"+ window.turingLectureId + ", page: "+ window.turingSlideId + ", user: "+ this.userId + ", unclicked Like, "+ this.description);
+    }
   }
 
   disLikeClicked(): void {
-    console.log("user: "+ window.turingUserId + " clicked Dislike");
+    if(this.ratingType.addDislike(this.userId)){
+      this.actionLike = "";
+      this.actionDislike = "-";
+      console.log("pdf:"+ window.turingLectureId + ", page: "+ window.turingSlideId + ", user: "+ this.userId + ", clicked Dislike, "+ this.description);
+    }else{
+      this.actionLike = "+";
+      this.actionDislike = "+";
+      console.log("pdf:"+ window.turingLectureId + ", page: "+ window.turingSlideId + ", user: "+ this.userId + ", unclicked Dislike, "+ this.description);
+    }
   }
+
+
 }

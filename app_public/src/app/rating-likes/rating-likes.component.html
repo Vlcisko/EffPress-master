@@ -2,8 +2,10 @@
     <h6 class="m-0" style="color: black;font-weight: bold;">
         {{description}}
     </h6>
-  <button (click)="likeClicked()" class="btn" style="color: rgb(85, 82, 82);">
-    <i class="fa fa-thumbs-up fa-{{size}}" >&nbsp;{{likes}}</i></button>
-  <button (click)="disLikeClicked()" class="btn" style="color: rgb(85, 82, 82);">
-    <i class="fa fa-thumbs-down fa-{{size}}">&nbsp;{{dislikes}}</i></button>
+  <button [disabled]="!ratingType.canDislike(userId)" (click)="likeClicked()" class="btn" style="color: rgb(85, 82, 82);">
+      <i style="font-weight: bold;" class="fa fa-{{size}}">{{actionLike}}&nbsp;</i><i class="fa fa-thumbs-up fa-{{size}}" >
+        &nbsp;{{ratingType.numLikes}}</i></button>
+  <button [disabled]="!ratingType.canLike(userId)" (click)="disLikeClicked()" class="btn" style="color: rgb(85, 82, 82);">
+      <i style="font-weight: bold;" class="fa fa-{{size}}">{{actionDislike}}&nbsp;</i><i class="fa fa-thumbs-down fa-{{size}}">
+      &nbsp;{{ratingType.numDislikes}}</i></button>
 </div>

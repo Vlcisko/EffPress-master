@@ -26,10 +26,9 @@
   <div class="col-lg-1"></div>
 </div>-->
 
-<div class="container-fluid">
+<div class="container-fluid customList overflow-auto">
   <div class="row">
       <div class="col">
-
           <div class="shadow-textarea row" style="text-align:center;border-top: 2px solid rgb(168, 166, 163)">
               <div class="col-lg-1"></div>
               <div class="col-lg-10">
@@ -38,14 +37,14 @@
                     id="exampleFormControlTextarea6"
                     rows="2"
                     placeholder="Text komentára..." [(ngModel)] = "userComment"></textarea>
-                <button (click)="saveComment()" type="button" class="btn" style="margin-top:5px; color:white ;background-color: rgb(83, 83, 87);">Vložiť komentár</button>
+                <button (click)="saveComment()" type="button" class="btn" style="margin:5px; color:white ;background-color: rgb(83, 83, 87);">Vložiť komentár</button>
               </div>
               <div class="col-lg-1"></div>
             </div>
 
-          <div class="customList">
-              <ul class="overflow-auto" id="contact-list">
-                  <app-comment *ngFor="let el of elList" [element]="el">
+          <div >
+              <ul  id="comments-list">
+                  <app-comment *ngFor="let comment of commentsList" [comment]="comment">
                   </app-comment>
               </ul>
           </div>

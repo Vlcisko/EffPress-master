@@ -53,23 +53,13 @@ export class PdfViewerHhangularComponent implements OnInit {
     this.pdfjsControl = this.pdfControls.pdfjsControl;
     this.pageIterator = this.pdfControls.pageIterator;
 
-     //this.pdfjsControl.load('assets/test.pdf', true);
-     //this.pdfjsGroupControl.selectNext();
-      //this.pdfjsGroupControl.selectLast();
-      /*console.log(this.pdfjsGroupControl.getSelectedPageIndex());
-      console.log("selected index 2222: "+ this.pdfjsControl.selectedIndex$.getValue());*/
-
-
-
-
     this.pdfjsControl.selectedIndex$.subscribe((number: number) => {
       if(number !== undefined) {
         number++;
+        console.log("pdf:"+ window.turingLectureId + ", page: "+ window.turingSlideId + ", user: "+ window.turingUserId + ", changed, new page position: "+ number);
         this.changedPage.emit(number);
-        console.log("selected page number: "+ number + " id: " + window.turingUserId);
       }
     });
-     //console.log(this.pdfjsGroupControl.getPageNumber());
 
   }
 
@@ -97,7 +87,7 @@ export class PdfViewerHhangularComponent implements OnInit {
 
 
   changePageHandler(event: Event) {
-    console.log(this.pdfjsGroupControl.selectPageIndex(parseInt((event.target as HTMLInputElement).value, 10)))
+    //console.log(this.pdfjsGroupControl.selectPageIndex(parseInt((event.target as HTMLInputElement).value, 10)))
     ;
   }
 }

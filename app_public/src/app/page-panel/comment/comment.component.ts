@@ -1,5 +1,5 @@
-import { User } from './../../user';
 import { Component, OnInit, Input } from '@angular/core';
+import { Comment } from './../../page';
 
 @Component({
   selector: 'app-comment',
@@ -8,7 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class CommentComponent implements OnInit {
 
-  @Input() element: User;
+  @Input() comment: Comment;
 
   constructor() { }
 
