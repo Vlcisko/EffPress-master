@@ -8,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CommentsComponent implements OnInit {
 
+  userComment: string = '';
+
   elList: Array<User> = [
     new User("Tomas","Mohol by niekto napísať čo sa myslí pod pojmom manažment?", "https://x1.xingassets.com/assets/frontend_minified/img/users/nobody_m.original.jpg"),
     new User("Juraj123","Celkom pekne vysvetlené to je na slajde 20", "https://x1.xingassets.com/assets/frontend_minified/img/users/nobody_m.original.jpg"),
@@ -44,5 +46,9 @@ export class CommentsComponent implements OnInit {
 
   ngOnInit() {
   }
+
+ saveComment(): void {
+  console.log("user: "+ window.turingUserId + " created comment: "+ this.userComment);
+ }
 
 }

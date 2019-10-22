@@ -1,3 +1,4 @@
+
 export interface Iteratorr<T> {
   // Return the current element.
   current(): any;
@@ -8,9 +9,11 @@ export interface Iteratorr<T> {
   setPage(page: Number): T;
 
   // Return the key of the current element.
-  key(): number;
+  selectedPageIndex(): number;
 
   // Checks if current position is valid.
   valid(): boolean;
+
+  getNumberPages(): number;
 
 }

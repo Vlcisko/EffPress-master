@@ -1,4 +1,6 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output, Input } from '@angular/core';
+import { Page } from './../page';
+import { Iteratorr } from './../iterator/Iterator';
 
 import {PdfjsControl, PdfjsGroupControl,
   RenderEvent, RenderEventType,
@@ -31,28 +33,42 @@ export class PdfViewerHhangularComponent implements OnInit {
   quality: RenderQuality = 2;
   textEnable = false;
 
-  pdfjsGroupControl: PdfjsGroupControl = new PdfjsGroupControl();
-  pdfjsControl: PdfjsControl = new PdfjsControl();
+
+  @Input() pdfControls: any;
 
 
   @Output() changedPage = new EventEmitter<number>();
 
 
-  constructor() { }
+  pdfjsGroupControl = new PdfjsGroupControl();
+  pageIterator: Iteratorr<Page>;
+  pdfjsControl = new PdfjsControl();
 
-  ngOnInit():void {
-     this.pdfjsControl.load('assets/psi_03_manazment-poziadaviek.pdf', true);
+
+  constructor() {}
+
+  ngOnInit(): void {
+
+    this.pdfjsGroupControl = this.pdfControls.pdfjsGroupControl;
+    this.pdfjsControl = this.pdfControls.pdfjsControl;
+    this.pageIterator = this.pdfControls.pageIterator;
+
      //this.pdfjsControl.load('assets/test.pdf', true);
-     this.pdfjsGroupControl.selectControl(this.pdfjsControl);
      //this.pdfjsGroupControl.selectNext();
       //this.pdfjsGroupControl.selectLast();
       /*console.log(this.pdfjsGroupControl.getSelectedPageIndex());
       console.log("selected index 2222: "+ this.pdfjsControl.selectedIndex$.getValue());*/
-      this.pdfjsControl.selectedIndex$.subscribe(number=>{
-        this.changedPage.emit(number);
-        console.log("selected page number: "+ number);
 
-      });
+
+
+
+    this.pdfjsControl.selectedIndex$.subscribe((number: number) => {
+      if(number !== undefined) {
+        number++;
+        this.changedPage.emit(number);
+        console.log("selected page number: "+ number + " id: " + window.turingUserId);
+      }
+    });
      //console.log(this.pdfjsGroupControl.getPageNumber());
 
   }

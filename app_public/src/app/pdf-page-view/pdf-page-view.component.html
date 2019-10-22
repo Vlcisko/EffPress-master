@@ -8,7 +8,7 @@
 <div class="row framework-content" style="height: 95vh;">
   <div class="col-9" style="background-color:rgb(194, 192, 190);border-right: 2px solid rgb(168, 166, 163)">
     <app-pdf-viewer-hhangular
-      (changedPage)="onPageChange($event)"></app-pdf-viewer-hhangular>
+      (changedPage)="onPageChange($event)" [pdfControls] = "pdfControls"></app-pdf-viewer-hhangular>
   </div>
 
   <div class="col-3" style="background-color:rgb(184, 182, 179)">

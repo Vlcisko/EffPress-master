@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './framework.component.html',
   styleUrls: ['./framework.component.scss']
 })
+
 export class FrameworkComponent implements OnInit {
 
   constructor(
@@ -31,3 +32,5 @@ export class FrameworkComponent implements OnInit {
     return user ? user.name : 'Guest';
   }
 }
+
+

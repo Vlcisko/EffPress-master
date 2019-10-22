@@ -17,4 +17,11 @@ export class RatingLikesComponent implements OnInit {
   ngOnInit() {
   }
 
+  likeClicked(): void {
+    console.log("user: "+ window.turingUserId + " clicked Like");
+  }
+
+  disLikeClicked(): void {
+    console.log("user: "+ window.turingUserId + " clicked Dislike");
+  }
 }

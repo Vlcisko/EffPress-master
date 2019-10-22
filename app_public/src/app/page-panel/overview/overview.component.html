@@ -9,29 +9,29 @@
         <i class="fa fa-arrow-circle-right fa-lg"></i></button>
   </div>
 </div>
-    
+
 <div class="row">
-  <div class="col-3"></div> 
-  <div class="col-8">    
-    <app-rating-likes [description]="'Náročnosť slajdu'" [likes]="4" [dislikes]="1" [size]="'lg'"></app-rating-likes>
+  <div class="col-3"></div>
+  <div class="col-8">
+    <app-rating-likes [description]="'Náročnosť slajdu'" [likes]="page.ratingDifficulty.numLikes" [dislikes]="page.ratingDifficulty.numDislikes" [size]="'lg'"></app-rating-likes>
   </div>
-  <div class="col-1"></div> 
+  <div class="col-1"></div>
 </div>
 
 <div class="row">
-  <div class="col-3"></div> 
-  <div class="col-8">    
-      <app-rating-likes [description]="'Kvalita slajdu'" [likes]="5" [dislikes]="1" [size]="'lg'"></app-rating-likes>
+  <div class="col-3"></div>
+  <div class="col-8">
+      <app-rating-likes [description]="'Kvalita slajdu'" [likes]="page.ratingQualtiy.numLikes" [dislikes]="page.ratingQualtiy.numDislikes" [size]="'lg'"></app-rating-likes>
   </div>
-  <div class="col-1"></div> 
+  <div class="col-1"></div>
 </div>
 
 <div class="row">
-  <div class="col-3"></div> 
-  <div class="col-8">    
-      <app-rating-likes [description]="'Prehľadnosť slajdu'" [likes]="6" [dislikes]="2" [size]="'lg'"></app-rating-likes>
+  <div class="col-3"></div>
+  <div class="col-8">
+      <app-rating-likes [description]="'Prehľadnosť slajdu'" [likes]="page.ratingLook.numLikes" [dislikes]="page.ratingLook.numDislikes" [size]="'lg'"></app-rating-likes>
   </div>
-  <div class="col-1"></div> 
+  <div class="col-1"></div>
 </div>
 
 

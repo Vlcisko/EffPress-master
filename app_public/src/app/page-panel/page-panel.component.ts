@@ -1,5 +1,5 @@
-import { AuthenticationService } from './../authentication.service';
-import { PagesDataService } from './../pages-data.service';
+//import { AuthenticationService } from './../authentication.service';
+//import { PagesDataService } from './../pages-data.service';
 import { Component, OnInit, Input } from '@angular/core';
 import { Page } from '../page';
 
@@ -25,8 +25,8 @@ export class PagePanelComponent implements OnInit {
   public formError: string;
 
   constructor(
-    private pagesDataService: PagesDataService,
-    private authenticationService: AuthenticationService
+    //private pagesDataService: PagesDataService,
+    //private authenticationService: AuthenticationService
   ) {}
 
   ngOnInit() {
@@ -53,24 +53,25 @@ export class PagePanelComponent implements OnInit {
     this.newRating.author = this.getUsername();
     if (this.formIsValid()) {
       console.log(this.newRating);
-      this.pagesDataService.addRatingByPdfPageId('5d8b640a58dda71924bd2f95', this.page._id, this.newRating)
-        .then((page: Page) => {
-          console.log('Rating saved', page);
-          this.page = page;
-          this.resetAndHideRatingForm();
-        });
+      // this.pagesDataService.addRatingByPdfPageId('5d8b640a58dda71924bd2f95', this.page._id, this.newRating)
+      //   .then((page: Page) => {
+      //     console.log('Rating saved', page);
+      //     this.page = page;
+      //     this.resetAndHideRatingForm();
+      //   });
     } else {
       this.formError = 'Pre vloženie je potrebné vyplniť všetky polia';
     }
   }
 
   public isLoggedIn(): boolean {
-    return this.authenticationService.isLoggedIn();
+    return !!window.turingUserId;
+    //return this.authenticationService.isLoggedIn();
   }
 
   public getUsername(): string {
-    const { name } = this.authenticationService.getCurrentUser();
-    return name ? name : 'Guest';
+    //const { name } = this.authenticationService.getCurrentUser();
+    return name ? window.turingUserId : 'Guest';
   }
 
 

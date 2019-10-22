@@ -2,6 +2,8 @@ import { Page } from '../page';
 import { Iteratorr } from './Iterator';
 import { Aggregator } from './Aggregator';
 
+
+
 export class PageIterator implements Iteratorr<Page> {
   private pages: PagesCollection;
 
@@ -15,7 +17,7 @@ export class PageIterator implements Iteratorr<Page> {
     return this.pages.getItems()[this.position];
   }
 
-  public key(): number {
+  public selectedPageIndex(): number {
     return this.position;
   }
 
@@ -35,6 +37,11 @@ export class PageIterator implements Iteratorr<Page> {
   public valid(): boolean {
     return this.position < this.pages.getCount();
   }
+
+  public getNumberPages(): number {
+    return this.pages.getCount();
+  }
+
 }
 
 export class PagesCollection implements Aggregator {

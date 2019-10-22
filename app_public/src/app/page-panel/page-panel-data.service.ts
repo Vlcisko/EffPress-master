@@ -21,7 +21,9 @@ export class PagePanelDataService {
 
   // Service message commands
   emitPage(change: Page): void {
-    this.pageSource.next(change);
+    if(change) {
+      this.pageSource.next(change);
+    }
   }
 
   constructor() { }
