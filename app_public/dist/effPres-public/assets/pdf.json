@@ -1,0 +1,159 @@
+{
+  "pdfs": [
+    {
+      "_id": "pdf.pdf",
+      "pages": [
+        {
+          "_id": "page1",
+          "pdfId": "pdf.pdf",
+          "ratingDifficulty": {
+            "numLikes":  0,
+            "numDislikes": 2,
+            "usersRatedList":[
+              {
+                "userID": "Tomas",
+                "ratedAs": "dislike"
+              },
+              {
+                "userID": "Tomas2",
+                "ratedAs": "dislike"
+              }
+            ]
+          },
+          "ratingQualtiy": {
+            "numLikes":  0,
+            "numDislikes": 2,
+            "usersRatedList":[
+              {
+                "userID": "Tomas",
+                "ratedAs": "dislike"
+              },
+              {
+                "userID": "Tomas2",
+                "ratedAs": "dislike"
+              }
+            ]
+          },
+          "ratingLook": {
+            "numLikes":  2,
+            "numDislikes": 0,
+            "usersRatedList":[
+              {
+                "userID": "userID1",
+                "ratedAs": "like"
+              },
+              {
+                "userID": "Tomas",
+                "ratedAs": "like"
+              }
+            ]
+          },
+          "pagePdfPosition": 1,
+          "comments": [
+            {
+              "userID": "userID1",
+              "commentText": "comment text..."
+            },
+            {
+              "userID": "userID1",
+              "commentText": "comment 11111 text..."
+            }
+          ]
+        },
+        {
+          "_id": "page2",
+          "pdfId": "pdf.pdf",
+          "ratingDifficulty": {
+            "numLikes":  1,
+            "numDislikes": 1,
+            "usersRatedList":[
+              {
+                "userID": "Tomas",
+                "ratedAs": "like"
+              },
+              {
+                "userID": "Tomas2",
+                "ratedAs": "dislike"
+              }
+            ]
+          },
+          "ratingQualtiy": {
+            "numLikes":  0,
+            "numDislikes": 2,
+            "usersRatedList":[
+              {
+                "userID": "Tomas",
+                "ratedAs": "dislike"
+              },
+              {
+                "userID": "Tomas2",
+                "ratedAs": "dislike"
+              }
+            ]
+          },
+          "ratingLook": {
+            "numLikes":  0,
+            "numDislikes": 2,
+            "usersRatedList":[
+              {
+                "userID": "Tomas",
+                "ratedAs": "dislike"
+              },
+              {
+                "userID": "Toma1s",
+                "ratedAs": "dislike"
+              }
+            ]
+          },
+          "pagePdfPosition": 2,
+          "comments": [
+            {
+              "userID": "userID1",
+              "commentText": "Page2 comment text..."
+            },
+            {
+              "userID": "userID1",
+              "commentText": "Page2 commentasdas  text..."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "_id": "pdf2.pdf",
+      "pages": [
+        {
+          "_id": "page1",
+          "pdfId": "pdf.pdf",
+          "ratingDifficulty": {
+            "numLikes":  1,
+            "numDislikes": 1
+          },
+          "ratingQualtiy": {
+            "numLikes":  1,
+            "numDislikes": 1
+          },
+          "ratingLook": {
+            "numLikes":  1,
+            "numDislikes": 1,
+            "usersRatedList":[
+              {
+                "userID": "Tomas",
+                "ratedAs": "dislike"
+              },
+              {
+                "userID": "Tomas",
+                "ratedAs": "dislike"
+              }
+            ]
+          },
+          "pagePdfPosition": 1,
+          "comments": {
+            "userID": "userID1",
+            "commentText": "comment text..."
+          }
+        }
+      ]
+    }
+  ]
+}
