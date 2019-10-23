@@ -28,7 +28,7 @@ export class PageIterator implements Iteratorr<Page> {
   }
 
   //vrati vyzadovanu stranu
-  public setPage(page: number): Page {
+  public getPage(page: number): Page {
     const item = this.pages.getItems()[page];
     this.position = page;
     return item;

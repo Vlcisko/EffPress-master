@@ -8,34 +8,34 @@
           "pdfId": "pdf.pdf",
           "ratingDifficulty": {
             "numLikes":  0,
-            "numDislikes": 0,
+            "numDislikes": 2,
             "usersRatedList":[
               {
                 "userID": "Tomas",
                 "ratedAs": "dislike"
               },
               {
-                "userID": "Tomas",
+                "userID": "Tomas2",
                 "ratedAs": "dislike"
               }
             ]
           },
           "ratingQualtiy": {
-            "numLikes":  2,
-            "numDislikes": 0,
+            "numLikes":  0,
+            "numDislikes": 2,
             "usersRatedList":[
               {
                 "userID": "Tomas",
                 "ratedAs": "dislike"
               },
               {
-                "userID": "Tomas",
+                "userID": "Tomas2",
                 "ratedAs": "dislike"
               }
             ]
           },
           "ratingLook": {
-            "numLikes":  0,
+            "numLikes":  2,
             "numDislikes": 0,
             "usersRatedList":[
               {
@@ -64,43 +64,43 @@
           "_id": "page2",
           "pdfId": "pdf.pdf",
           "ratingDifficulty": {
-            "numLikes":  0,
-            "numDislikes": 0,
+            "numLikes":  1,
+            "numDislikes": 1,
             "usersRatedList":[
               {
                 "userID": "Tomas",
-                "ratedAs": "dislike"
+                "ratedAs": "like"
               },
               {
-                "userID": "Tomas",
+                "userID": "Tomas2",
                 "ratedAs": "dislike"
               }
             ]
           },
           "ratingQualtiy": {
             "numLikes":  0,
-            "numDislikes": 0,
+            "numDislikes": 2,
             "usersRatedList":[
               {
                 "userID": "Tomas",
                 "ratedAs": "dislike"
               },
               {
-                "userID": "Tomas",
+                "userID": "Tomas2",
                 "ratedAs": "dislike"
               }
             ]
           },
           "ratingLook": {
-            "numLikes":  2,
-            "numDislikes": 0,
+            "numLikes":  0,
+            "numDislikes": 2,
             "usersRatedList":[
               {
                 "userID": "Tomas",
                 "ratedAs": "dislike"
               },
               {
-                "userID": "Tomas",
+                "userID": "Toma1s",
                 "ratedAs": "dislike"
               }
             ]

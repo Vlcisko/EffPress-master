@@ -12,7 +12,7 @@
 // }
 
 export class Rating {
-  numLikes: number = 7;
+  numLikes: number = 0;
   numDislikes: number = 0;
   usersRatedList: { userID: string, ratedAs: string }[] = [];
 

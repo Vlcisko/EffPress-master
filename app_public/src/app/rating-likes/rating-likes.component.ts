@@ -19,6 +19,7 @@ export class RatingLikesComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    console.log(this.ratingType.getUserRating(this.userId));
     if (!this.ratingType.canLike(window.turingUserId)) {
       this.actionDislike = "";
       this.actionLike = "-";
@@ -52,6 +53,5 @@ export class RatingLikesComponent implements OnInit {
       console.log("pdf:"+ window.turingLectureId + ", page: "+ window.turingSlideId + ", user: "+ this.userId + ", unclicked Dislike, "+ this.description);
     }
   }
-
 
 }

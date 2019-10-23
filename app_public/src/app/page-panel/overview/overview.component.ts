@@ -14,10 +14,12 @@ import { PagePanelDataService } from '../page-panel-data.service';
 export class OverviewComponent implements OnInit {
 
   page: Page;
+  pagePosition: number = 1;
 
   constructor(private pagePanelDataService : PagePanelDataService) {
     this.pagePanelDataService.pageChanged$.subscribe(page => {
       this.page = page;
+      this.pagePosition = page.pagePdfPosition + 1;
     });
   }
 

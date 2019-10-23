@@ -55,9 +55,8 @@ export class PdfViewerHhangularComponent implements OnInit {
 
     this.pdfjsControl.selectedIndex$.subscribe((number: number) => {
       if(number !== undefined) {
-        number++;
-        console.log("pdf:"+ window.turingLectureId + ", page: "+ window.turingSlideId + ", user: "+ window.turingUserId + ", changed, new page position: "+ number);
         this.changedPage.emit(number);
+        console.log("pdf:"+ window.turingLectureId + ", page: "+ window.turingSlideId + ", user: "+ window.turingUserId + ", changed, new page position: "+ number);
       }
     });
 

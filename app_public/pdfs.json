@@ -1,0 +1,1103 @@
+{
+  "pdfs": [
+    {
+      "pages": [
+          {
+              "comments": [
+                {
+                "userID": "userIDasd",
+                "commentText": "comment text..."
+                },
+                {
+                  "userID": "userIDyxcyxc",
+                  "commentText": "comment 11111 text..."
+                }
+              ],
+              "_id": "page0",
+              "ratingDifficulty": {
+                  "numLikes": 1,
+                  "numDislikes": 1,
+                  "usersRatedList": [
+                    {
+                    "userID": "Tomas",
+                    "ratedAs": "like"
+                    },
+                    {
+                      "userID": "Tomas2",
+                      "ratedAs": "dislike"
+                    }
+                  ]
+              },
+              "ratingQualtiy": {
+                  "numLikes": 0,
+                  "numDislikes": 1,
+                  "usersRatedList": [
+                    {
+                    "userID": "Tomas",
+                    "ratedAs": "dislike"
+                    }
+                  ]
+              },
+              "ratingLook": {
+                  "numLikes": 1,
+                  "numDislikes": 0,
+                  "usersRatedList": [
+                    {
+                    "userID": "Tomas2",
+                    "ratedAs": "like"
+                    }
+                  ]
+              },
+              "pagePdfPosition": 0
+          },
+          {
+              "comments": [
+                {
+                "userID": "userIDsdgdfg",
+                "commentText": "commentc vbcv  text..."
+                },
+                {
+                  "userID": "userIDcvxbcxvbxcvbxc",
+                  "commentText": "comment 123 text..."
+                }
+              ],
+              "_id": "page1",
+              "ratingDifficulty": {
+                  "numLikes": 2,
+                  "numDislikes": 2,
+                  "usersRatedList": [
+                    {
+                    "userID": "Tomas",
+                    "ratedAs": "like"
+                    },
+                    {
+                      "userID": "Tomas2",
+                      "ratedAs": "dislike"
+                    },
+                    {
+                      "userID": "Tomas3",
+                      "ratedAs": "like"
+                    },
+                    {
+                      "userID": "Tomas4",
+                      "ratedAs": "dislike"
+                    }
+                  ]
+              },
+              "ratingQualtiy": {
+                  "numLikes": 0,
+                  "numDislikes": 2,
+                  "usersRatedList": []
+              },
+              "ratingLook": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "pagePdfPosition": 1
+          },
+          {
+              "comments": [],
+              "_id": "page2",
+              "ratingDifficulty": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "ratingQualtiy": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "ratingLook": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "pagePdfPosition": 2
+          },
+          {
+              "comments": [],
+              "_id": "page3",
+              "ratingDifficulty": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "ratingQualtiy": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "ratingLook": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "pagePdfPosition": 3
+          },
+          {
+              "comments": [],
+              "_id": "page4",
+              "ratingDifficulty": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "ratingQualtiy": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "ratingLook": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "pagePdfPosition": 4
+          },
+          {
+              "comments": [],
+              "_id": "page5",
+              "ratingDifficulty": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "ratingQualtiy": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "ratingLook": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "pagePdfPosition": 5
+          },
+          {
+              "comments": [],
+              "_id": "page6",
+              "ratingDifficulty": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "ratingQualtiy": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "ratingLook": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "pagePdfPosition": 6
+          },
+          {
+              "comments": [],
+              "_id": "page7",
+              "ratingDifficulty": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "ratingQualtiy": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "ratingLook": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "pagePdfPosition": 7
+          },
+          {
+              "comments": [],
+              "_id": "page8",
+              "ratingDifficulty": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "ratingQualtiy": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "ratingLook": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "pagePdfPosition": 8
+          },
+          {
+              "comments": [],
+              "_id": "page9",
+              "ratingDifficulty": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "ratingQualtiy": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "ratingLook": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "pagePdfPosition": 9
+          },
+          {
+              "comments": [],
+              "_id": "page10",
+              "ratingDifficulty": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "ratingQualtiy": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "ratingLook": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "pagePdfPosition": 10
+          },
+          {
+              "comments": [],
+              "_id": "page11",
+              "ratingDifficulty": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "ratingQualtiy": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "ratingLook": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "pagePdfPosition": 11
+          },
+          {
+              "comments": [],
+              "_id": "page12",
+              "ratingDifficulty": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "ratingQualtiy": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "ratingLook": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "pagePdfPosition": 12
+          },
+          {
+              "comments": [],
+              "_id": "page13",
+              "ratingDifficulty": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "ratingQualtiy": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "ratingLook": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "pagePdfPosition": 13
+          },
+          {
+              "comments": [],
+              "_id": "page14",
+              "ratingDifficulty": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "ratingQualtiy": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "ratingLook": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "pagePdfPosition": 14
+          },
+          {
+              "comments": [],
+              "_id": "page15",
+              "ratingDifficulty": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "ratingQualtiy": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "ratingLook": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "pagePdfPosition": 15
+          },
+          {
+              "comments": [],
+              "_id": "page16",
+              "ratingDifficulty": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "ratingQualtiy": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "ratingLook": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "pagePdfPosition": 16
+          },
+          {
+              "comments": [],
+              "_id": "page17",
+              "ratingDifficulty": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "ratingQualtiy": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "ratingLook": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "pagePdfPosition": 17
+          },
+          {
+              "comments": [],
+              "_id": "page18",
+              "ratingDifficulty": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "ratingQualtiy": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "ratingLook": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "pagePdfPosition": 18
+          },
+          {
+              "comments": [],
+              "_id": "page19",
+              "ratingDifficulty": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "ratingQualtiy": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "ratingLook": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "pagePdfPosition": 19
+          },
+          {
+              "comments": [],
+              "_id": "page20",
+              "ratingDifficulty": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "ratingQualtiy": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "ratingLook": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "pagePdfPosition": 20
+          },
+          {
+              "comments": [],
+              "_id": "page21",
+              "ratingDifficulty": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "ratingQualtiy": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "ratingLook": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "pagePdfPosition": 21
+          },
+          {
+              "comments": [],
+              "_id": "page22",
+              "ratingDifficulty": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "ratingQualtiy": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "ratingLook": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "pagePdfPosition": 22
+          },
+          {
+              "comments": [],
+              "_id": "page23",
+              "ratingDifficulty": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "ratingQualtiy": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "ratingLook": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "pagePdfPosition": 23
+          },
+          {
+              "comments": [],
+              "_id": "page24",
+              "ratingDifficulty": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "ratingQualtiy": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "ratingLook": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "pagePdfPosition": 24
+          },
+          {
+              "comments": [],
+              "_id": "page25",
+              "ratingDifficulty": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "ratingQualtiy": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "ratingLook": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "pagePdfPosition": 25
+          },
+          {
+              "comments": [],
+              "_id": "page26",
+              "ratingDifficulty": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "ratingQualtiy": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "ratingLook": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "pagePdfPosition": 26
+          },
+          {
+              "comments": [],
+              "_id": "page27",
+              "ratingDifficulty": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "ratingQualtiy": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "ratingLook": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "pagePdfPosition": 27
+          },
+          {
+              "comments": [],
+              "_id": "page28",
+              "ratingDifficulty": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "ratingQualtiy": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "ratingLook": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "pagePdfPosition": 28
+          },
+          {
+              "comments": [],
+              "_id": "page29",
+              "ratingDifficulty": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "ratingQualtiy": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "ratingLook": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "pagePdfPosition": 29
+          },
+          {
+              "comments": [],
+              "_id": "page30",
+              "ratingDifficulty": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "ratingQualtiy": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "ratingLook": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "pagePdfPosition": 30
+          },
+          {
+              "comments": [],
+              "_id": "page31",
+              "ratingDifficulty": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "ratingQualtiy": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "ratingLook": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "pagePdfPosition": 31
+          },
+          {
+              "comments": [],
+              "_id": "page32",
+              "ratingDifficulty": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "ratingQualtiy": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "ratingLook": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "pagePdfPosition": 32
+          },
+          {
+              "comments": [],
+              "_id": "page33",
+              "ratingDifficulty": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "ratingQualtiy": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "ratingLook": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "pagePdfPosition": 33
+          },
+          {
+              "comments": [],
+              "_id": "page34",
+              "ratingDifficulty": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "ratingQualtiy": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "ratingLook": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "pagePdfPosition": 34
+          },
+          {
+              "comments": [],
+              "_id": "page35",
+              "ratingDifficulty": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "ratingQualtiy": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "ratingLook": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "pagePdfPosition": 35
+          },
+          {
+              "comments": [],
+              "_id": "page36",
+              "ratingDifficulty": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "ratingQualtiy": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "ratingLook": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "pagePdfPosition": 36
+          },
+          {
+              "comments": [],
+              "_id": "page37",
+              "ratingDifficulty": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "ratingQualtiy": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "ratingLook": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "pagePdfPosition": 37
+          },
+          {
+              "comments": [],
+              "_id": "page38",
+              "ratingDifficulty": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "ratingQualtiy": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "ratingLook": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "pagePdfPosition": 38
+          },
+          {
+              "comments": [],
+              "_id": "page39",
+              "ratingDifficulty": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "ratingQualtiy": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "ratingLook": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "pagePdfPosition": 39
+          },
+          {
+              "comments": [],
+              "_id": "page40",
+              "ratingDifficulty": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "ratingQualtiy": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "ratingLook": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "pagePdfPosition": 40
+          },
+          {
+              "comments": [],
+              "_id": "page41",
+              "ratingDifficulty": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "ratingQualtiy": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "ratingLook": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "pagePdfPosition": 41
+          },
+          {
+              "comments": [],
+              "_id": "page42",
+              "ratingDifficulty": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "ratingQualtiy": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "ratingLook": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "pagePdfPosition": 42
+          },
+          {
+              "comments": [],
+              "_id": "page43",
+              "ratingDifficulty": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "ratingQualtiy": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "ratingLook": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "pagePdfPosition": 43
+          },
+          {
+              "comments": [],
+              "_id": "page44",
+              "ratingDifficulty": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "ratingQualtiy": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "ratingLook": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "pagePdfPosition": 44
+          },
+          {
+              "comments": [],
+              "_id": "page45",
+              "ratingDifficulty": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "ratingQualtiy": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "ratingLook": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "pagePdfPosition": 45
+          },
+          {
+              "comments": [],
+              "_id": "page46",
+              "ratingDifficulty": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "ratingQualtiy": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "ratingLook": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "pagePdfPosition": 46
+          },
+          {
+              "comments": [],
+              "_id": "page47",
+              "ratingDifficulty": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "ratingQualtiy": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "ratingLook": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "pagePdfPosition": 47
+          },
+          {
+              "comments": [],
+              "_id": "page48",
+              "ratingDifficulty": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "ratingQualtiy": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "ratingLook": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "pagePdfPosition": 48
+          },
+          {
+              "comments": [],
+              "_id": "page49",
+              "ratingDifficulty": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "ratingQualtiy": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "ratingLook": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "pagePdfPosition": 49
+          },
+          {
+              "comments": [],
+              "_id": "page50",
+              "ratingDifficulty": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "ratingQualtiy": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "ratingLook": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "pagePdfPosition": 50
+          },
+          {
+              "comments": [],
+              "_id": "page51",
+              "ratingDifficulty": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "ratingQualtiy": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "ratingLook": {
+                  "numLikes": 0,
+                  "numDislikes": 0,
+                  "usersRatedList": []
+              },
+              "pagePdfPosition": 51
+          }
+      ],
+      "_id": "psi_03_manazment-poziadaviek.pdf"
+  }
+  ]
+}
