@@ -22,7 +22,7 @@
     "@hhangular/pdfjs": "^2.0.37",
     "@types/pdfjs-dist": "^2.1.1",
     "bootstrap": "^4.3.1",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "mongoose": "^5.7.1",
     "pdfjs-dist": "^2.1.266",
     "popper": "^1.0.1",
